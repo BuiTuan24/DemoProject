@@ -1,11 +1,12 @@
-package project.java.quanliproject.service;
+package project.java.quanliproject.domain.service;
 
 
 import org.springframework.stereotype.Service;
-import project.java.quanliproject.dto.UserDto;
-import project.java.quanliproject.entity.UserEntity;
-import project.java.quanliproject.mapper.UserMapper;
-import project.java.quanliproject.repository.UserRepository;
+import project.java.quanliproject.application.dto.UserDto;
+import project.java.quanliproject.domain.entity.UserEntity;
+import project.java.quanliproject.application.mapper.UserMapper;
+import project.java.quanliproject.domain.repository.UserRepository;
+import project.java.quanliproject.domain.service.UserService;
 
 
 import java.util.List;

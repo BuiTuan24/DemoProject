@@ -1,8 +1,8 @@
-package project.java.quanliproject.mapper;
+package project.java.quanliproject.application.mapper;
 
 
-import project.java.quanliproject.dto.UserDto;
-import project.java.quanliproject.entity.UserEntity;
+import project.java.quanliproject.application.dto.UserDto;
+import project.java.quanliproject.domain.entity.UserEntity;
 
 public class UserMapper {
     public static UserEntity mapToUserEntity(UserDto userDto){

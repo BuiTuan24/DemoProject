@@ -1,4 +1,4 @@
-package project.java.quanliproject.entity;
+package project.java.quanliproject.domain.entity;
 
 
 import jakarta.persistence.*;

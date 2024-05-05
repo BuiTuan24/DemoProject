@@ -1,4 +1,4 @@
-package project.java.quanliproject.dto;
+package project.java.quanliproject.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

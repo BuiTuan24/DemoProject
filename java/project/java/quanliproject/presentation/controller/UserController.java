@@ -1,10 +1,10 @@
-package project.java.quanliproject.controller;
+package project.java.quanliproject.presentation.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import project.java.quanliproject.dto.UserDto;
-import project.java.quanliproject.service.UserService;
+import project.java.quanliproject.application.dto.UserDto;
+import project.java.quanliproject.domain.service.UserService;
 
 import java.util.List;
 

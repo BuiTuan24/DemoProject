@@ -1,6 +1,6 @@
-package project.java.quanliproject.service;
+package project.java.quanliproject.domain.service;
 
-import project.java.quanliproject.dto.UserDto;
+import project.java.quanliproject.application.dto.UserDto;
 import java.util.List;
 
 
