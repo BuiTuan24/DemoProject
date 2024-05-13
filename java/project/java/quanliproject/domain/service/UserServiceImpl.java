@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
 
     public UserServiceImpl(UserRepository userRepository) {
@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto getUserEntityById(Long id) {
+    public UserDto getUserEntityById(String id) {
 
         UserEntity userEntity = userRepository
                 .findById(id)
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto updateUserEntity(Long id, UserDto updatedUserDto) {
+    public UserDto updateUserEntity(String id, UserDto updatedUserDto) {
 
         UserEntity existingUserEntity = userRepository
                 .findById(id)
@@ -56,10 +56,10 @@ public class UserServiceImpl implements UserService {
     public List<UserDto> getAllUser() {
         List<UserEntity> user = userRepository.findAll();
         return user.stream()
-                .map((userEntity) -> UserMapper.mapToUserDto(userEntity)).collect(Collectors.toList());
+                .map(UserMapper::mapToUserDto).collect(Collectors.toList());
     }
     @Override
-    public void deleteUser(Long id) {
+    public void deleteUser(String id) {
         UserEntity userEntity = userRepository
                 .findById(id)
                 .orElseThrow(() -> new RuntimeException("User khong ton tai"));

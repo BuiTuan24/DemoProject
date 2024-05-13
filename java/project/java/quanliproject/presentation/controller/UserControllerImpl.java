@@ -9,13 +9,13 @@ import project.java.quanliproject.domain.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/username")
-public class UserController{
+@RequestMapping(value = "/api/UserHome")
+public class UserControllerImpl {
 
 
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public UserControllerImpl(UserService userService) {
         this.userService = userService;
     }
 
@@ -25,13 +25,13 @@ public class UserController{
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserEntityById( @PathVariable Long id) {
+    public ResponseEntity<UserDto> getUserEntityById( @PathVariable String id) {
         UserDto userDto = userService.getUserEntityById(id);
         return ResponseEntity.ok(userDto);
     }
 
     @PutMapping("/{id}/update")
-    public ResponseEntity<UserDto> updateUser( @PathVariable Long id, @RequestBody UserDto updatedUserDto) {
+    public ResponseEntity<UserDto> updateUser( @PathVariable String id, @RequestBody UserDto updatedUserDto) {
         UserDto updatedUser = userService.updateUserEntity(id, updatedUserDto);
         return ResponseEntity.ok(updatedUser);
     }
@@ -43,7 +43,7 @@ public class UserController{
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser( @PathVariable Long id) {
+    public ResponseEntity<String> deleteUser( @PathVariable String id) {
         userService.deleteUser(id);
         return ResponseEntity.ok("Thong tin User da xoa thanh cong!");
     }
