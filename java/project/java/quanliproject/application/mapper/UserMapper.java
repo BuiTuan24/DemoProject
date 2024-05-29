@@ -20,8 +20,8 @@ public class UserMapper {
         UserDto userDto = new UserDto(
                 userEntity.getId(),
                 userEntity.getUserName(),
-                userEntity.getEmail(),
-                userEntity.getPhonenumber()
+                userEntity.getThongtinUser(),
+                userEntity.getSodienthoaiUser()
         );
 
         return userDto;

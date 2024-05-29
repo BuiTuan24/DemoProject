@@ -3,17 +3,25 @@ package project.java.quanliproject.domain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class Phonenumber {
+
+
     @Id
-    private Long id;
+    private String id;
+    private  String user;
 
-    public void setId(Long id) {
-        this.id = id;
+    public UserEntity getUser() {
+        UserEntity user = new UserEntity();
+        return user;
     }
-
-    public Long getId() {
-        return id;
+    public void setUser(UserEntity user) {
+        this.user = user.toString();
     }
 }
+

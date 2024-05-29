@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new RuntimeException("User khong ton tai"));
 
         existingUserEntity.setUserName(updatedUserDto.getUserName());
-        existingUserEntity.setEmail(updatedUserDto.getEmail());
+        existingUserEntity.setThongtinUser(updatedUserDto.getEmail());
         UserEntity updatedUserEntity = userRepository.save(existingUserEntity);
         return UserMapper.mapToUserDto(updatedUserEntity);
     }
